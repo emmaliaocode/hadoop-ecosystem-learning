@@ -11,12 +11,12 @@
 - 一套**用於儲存、分析、報告的數據系統**。
 - 目的: 建構**面向分析**的集成化數據環境。
 
-![Untitled](imgs/hive-warehouse-concept-1.png)
+![](../imgs/hive-warehouse-concept-1.png)
 
 - 數據倉庫本身**不生產**任何數據，數據來自不同外部系統。
 - 數據倉庫本身**不消費**任何數據，結果開放給各外部應用。
 
-![Untitled](imgs/hive-warehouse-concept-2.png)
+![](../imgs/hive-warehouse-concept-2.png)
 
 ## 場景案例：數據倉庫為何而來
 
@@ -29,8 +29,7 @@
     - **聯機事務處理系統 (OLTP)**: **前台接收的用戶數據可以立即傳到後台處理，並在很短的時間內給出處理結果**。
     - **關聯型數據庫 (RDBMS)** 是 OLTP 典型應用，如 Oracle、MySQL、SQL Server 等。
         
-        ![Untitled](imgs/hive-warehouse-example.png)
-        
+        ![](../imgs/hive-warehouse-example.png)
 
 2. 分析型決策的制定
     - **基於業務數據展開數據分析，基於分析的結果支撐決策**，即**數據驅動決策的制定 (Data-driven Decision Making)**。
@@ -43,8 +42,8 @@
         - 更好地進行各種規模的數據分析，同時也不影響 OLTP 系統運行，需要建構一個集成統一的數據分析平台。
         - 目的: 面向分析、支持分析。
     - 數據倉庫的建構
-        
-        ![Untitled](imgs/hive-warehouse-example-design.png)
+
+        ![](../imgs/hive-warehouse-example-design.png)
         
 
 ---
@@ -53,29 +52,32 @@
 
 ## 數據倉庫主要特徵 ⭐️
 
-![Untitled](imgs/hive-warehouse-features.png)
+![](../imgs/hive-warehouse-features.png)
 
 1. **面向主題 (Subject-oriented)**
-    
+
     抽象概念，**數據綜合**。
     
     - **開始數據分析的時候要確認主題**。
+
 2. **集成性 (Integrated)**
-    
+
     數據通常會分布在多個操作型系統，彼此**分散、獨立、異構**。需**要集成到數據倉主題下**。
-    
+
     - 數據進入倉庫前，必然要經過統一與綜合，對數據進行**抽取、清理、轉換和匯總**。
         - 統一源數據中所有**矛盾之處**。例如: 同名異義、異名同義、單位不統一、字長不一致等。
         - 進行數據**綜合與計算**。
         - **抽取、轉換、加載 → Extract, Transform, Load (ETL)**
+  
 3. **非易失性 (Non-volatile)**
-    
+
     又稱**非易變性**。**數據倉庫是分析數據的平台，不是創造數據的平台**。
-    
+
     - 數據倉庫的數據反映的是一段相當長的時間內歷史數據的內容。
     - 數據倉庫中一般有**大量的查詢操作**，但修改和刪除操作很少。
+
 4. **時變性 (Time-variant)**
-    
+
     數據倉庫的數據需要**隨著時間更新**，以適應決策的需要。
     
     - 數據倉庫包含各種顆粒度 (日期、星期、月份、季度、年份) 的歷史數據。
@@ -120,7 +122,7 @@
 ## 場景設計: 如何模擬實現 Hive 功能
 
 - 範例: 在 HDFS 文件系統上有一個文件，路徑為 `/data/china_user.txt` 。需求: 統計來自於上海年齡大於 25 歲的用戶有多少個？
-    
+
     ```
     1,zhangsan,18,beijing
     2,lisi,25,shanghai
@@ -129,7 +131,6 @@
     5,james,45,hangzhou
     6,tony,26,beijing
     ```
-    
 
 ### 重點
 
@@ -144,7 +145,7 @@
     - 表的列對應著文件哪一個字段 (順序訊息)
     - 文件字段之間的分隔符號是什麼
 
-![Untitled](imgs/hive-metadata.png)
+![](../imgs/hive-metadata.png)
 
 ### 2. SQL 語法解析、編譯
 
@@ -155,7 +156,7 @@
 
 基於上述分析，最終想要模擬實現的 Hive 功能，大致需要下圖所示組建參與其中。
 
-![Untitled](imgs/hive-components.png)
+![](../imgs/hive-components.png)
 
 - 使用者
     - 寫 SQL
@@ -175,7 +176,7 @@
 
 ## Hive 架構圖
 
-![Untitled](imgs/hive-arch.png)
+![](../imgs/hive-arch.png)
 
 - 用戶接口
     - 包括 CLI、JDBC (JAVA 的一種協議)、WebGUI。
@@ -198,14 +199,14 @@
 
 ## Hive Metastore
 
-![Untitled](imgs/hive-metastore.png)
+![](../imgs/hive-metastore.png)
 
 - **元數據服務**，管理元數據。
 - 有了 Meatastore，就可以有多個客戶端同時連接，而且客戶端不需要知道 MySQL 數據庫的用戶名，只需要連接 Metastore 服務。保障了 Hive 元數據的安全。
 - Metastore 配置有三種模式:
     - 內嵌模式、本地模式、**遠程模式**。
         
-        ![Untitled](imgs/hive-metastore-mode-comparison.png)
+        ![](../imgs/hive-metastore-mode-comparison.png)
         
 
 ---
@@ -214,7 +215,7 @@
 
 ## Hive 自帶客戶端 ⭐️
 
-![Untitled](imgs/hive-client.png)
+![](../imgs/hive-client.png)
 
 - 老版本 - bin/hive (Shell 實現) → 訪問 Metastore → 訪問 Mysql
 - 新版本 - bin/beeline (JDBC 實現) → 訪問 HiveServer2 → 訪問 Metastore → 訪問 Mysql
@@ -236,18 +237,18 @@
     
     ## 關係梳理
     
-    ![Untitled](imgs/hive-metastore-server2-relationship.png)
+    ![](../imgs/hive-metastore-server2-relationship.png)
     
     - Hive 第二代客戶端: Beeline CLI → 訪問 HiveServer2  → 訪問 Metastore → 訪問 Mysql
     - Hive 第一代客戶端: Hive CLI → 訪問 Metastore → 訪問 Mysql
     
-    ---
-    
-    [【黑马程序员】大数据Hadoop入门教程-数据仓库基础与ApacheHive入门-13-Apache hive-数据库与建库、切换库操作](https://www.youtube.com/watch?v=50rjRw3my3E&list=PLFbd8KZNbe-_hl4cLftTLwA4THNSLhB10&index=66&ab_channel=%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98)
-    
-    ## Hive 數據模型總覽
-    
-    ![Untitled](imgs/hive-model-overview.png)
+---
+
+[【黑马程序员】大数据Hadoop入门教程-数据仓库基础与ApacheHive入-13-Apache hive-数据库与建库、切换库操作](https://www.youtube.comwatch?v=50rjRw3my3E&list=PLFbd8KZNbe-_hl4cLftTLwA4THNSLhB10index=66ab_channel=%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98)
+
+## Hive 數據模型總覽
+
+![](../imgs/hive-model-overview.png)
     
 - 數據庫間隔離，下面有很多表，表下有很多數據。
 - 表是管理數據的幾本單位。
@@ -327,7 +328,7 @@ create table [if not exists] [db_name.]table_name
 
 ## Hive 建表基礎語法練習
 
-![Untitled](imgs/hive-basic-code-example.png)
+![](../imgs/hive-basic-code-example.png)
 
 → **Data Grip**
 
@@ -386,7 +387,7 @@ load data [local] inpath 'filepath' [overwrite] into table table_name;
 
 - 若有指定 `local` ，將在本地文件系統中查找文件路徑。沒有指定 `local` ，當 `filepath` 指向的是一個完整的 URI，會直接使用這個 URI。
     
-    ![Untitled](imgs/hive-load-data-local.png)
+    ![](../imgs/hive-load-data-local.png)
     
 - 若沒有指定 `schema` ，Hive 會使用在 Hadoop 配置文件中參數 `[fs.default.name](http://fs.default.name)` 指定的 (幾乎都是 HDFS)。
 

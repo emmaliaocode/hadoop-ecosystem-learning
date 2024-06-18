@@ -8,7 +8,7 @@
 
 - 先分再合，分而治之
 
-![Untitled](imgs/yarn-mapreduce.png)
+![](../imgs/yarn-mapreduce.png)
 
 ### 第一階段: Map
 
@@ -27,7 +27,7 @@
 
 ### 編程實現思路
 
-![Untitled](imgs/yarn-wordcount.png)
+![](../imgs/yarn-wordcount.png)
 
 ### Map 階段核心
 
@@ -63,7 +63,7 @@
 
 ## YARN 官方架構圖
 
-![Untitled](imgs/yarn-arch.png)
+![](../imgs/yarn-arch.png)
 
 ## YARN 三大組件
 
@@ -111,10 +111,10 @@
 
 ## MapReduce 提交 YARN 交互流程
 
-![Untitled](imgs/yarn-mapreduce-submit-1.png)
+![](../imgs/yarn-mapreduce-submit-1.png)
 
-![Untitled](imgs/yarn-mapreduce-submit-2.png)
+![](../imgs/yarn-mapreduce-submit-2.png)
 
-![Untitled](imgs/yarn-mapreduce-submit-3.png)
+![](../imgs/yarn-mapreduce-submit-3.png)
 
-![Untitled](imgs/yarn-mapreduce-submit-4.png)
+![](../imgs/yarn-mapreduce-submit-4.png)

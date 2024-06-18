@@ -21,7 +21,7 @@
     - 物理上一起：某些角色會部署在同一台機器上
 - 兩個集群都是標準的**主從架構**集群 (大哥帶小弟幹活)
 
-![Untitled](imgs/hdfs-hadoop-cluster-intro.png)
+![](../imgs/hdfs-hadoop-cluster-intro.png)
 
 ### HDFS 集群 (分散式存儲系統)
 
@@ -76,19 +76,19 @@ hadoop jar hadoop-mapreduce-examples-3.3.0.jar wordcount /wordcount/input /wordc
 
 1
 
-![Untitled](imgs/hdfs-distributed-system-attr-1.png)
+![](../imgs/hdfs-distributed-system-attr-1.png)
 
 2
 
-![Untitled](imgs/hdfs-distributed-system-attr-2.png)
+![](../imgs/hdfs-distributed-system-attr-2.png)
 
 3
 
-![Untitled](imgs/hdfs-distributed-system-attr-3.png)
+![](../imgs/hdfs-distributed-system-attr-3.png)
 
 4
 
-![Untitled](imgs/hdfs-distributed-system-attr-4.png)
+![](../imgs/hdfs-distributed-system-attr-4.png)
 
 1. 分散式儲存
     - 解決: 數據量大，單機儲存遇到瓶頸
