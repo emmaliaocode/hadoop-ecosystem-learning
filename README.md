@@ -1,13 +1,14 @@
 # Hadoop Ecosystem Learning
 
-- [Apache Hadoop](https://hadoop.apache.org/): HDFS & YARN
-- [Apache Hive](https://hive.apache.org/)
-- [Apache Spark](https://spark.apache.org/)
-
 ## Overview
 ![](imgs/hadoop-ecosystem.png)
 View the original mindmap on [Gitmind](https://gitmind.com/app/docs/mxygow3d).
 
+Subjects including:
+
+- [Apache Hadoop](https://hadoop.apache.org/): HDFS & YARN
+- [Apache Hive](https://hive.apache.org/)
+- [Apache Spark](https://spark.apache.org/)
 
 ## Videos
 
