@@ -42,3 +42,12 @@ Subjects including:
 - [【黑马程序员】大数据Hadoop入门教程-数据仓库基础与ApacheHive入门-16-Apache hive-常见的show语法](https://www.youtube.com/watch?v=hPrnhWApJkk&list=PLFbd8KZNbe-_hl4cLftTLwA4THNSLhB10&index=69&ab_channel=%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98)
 - [【黑马程序员】大数据Hadoop入门教程-Apache Hive DML语句与函数使用-01-Hive-SQL-DML-Load加载数据操作](https://www.youtube.com/watch?v=DSlxybgGFj8&list=PLFbd8KZNbe-_hl4cLftTLwA4THNSLhB10&index=72&ab_channel=%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98)
 - [【黑马程序员】大数据Hadoop入门教程-Apache Hive DML语句与函数使用-02-Hive-SQL-DML-Insert插入数据](https://www.youtube.com/watch?v=AzGWohds6yM&list=PLFbd8KZNbe-_hl4cLftTLwA4THNSLhB10&index=73&ab_channel=%E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98)
+
+### Apache Spark
+- [What exactly is Apache Spark? | Big Data Tools](https://www.youtube.com/watch?v=ymtq8yjmD9I&ab_channel=nullQueries)
+- [The ONLY PySpark Tutorial You Will Ever Need.](https://www.youtube.com/watch?v=cZS5xYYIPzk&ab_channel=MoranReznik)
+- [Apache Spark/PySpark Tutorial: What is Apache Spark? | Lecture 1](https://www.youtube.com/watch?v=XhjIJGsAMsQ&list=PL6UwySlcwEYKiC-EjEmN4f33c5fVpbzha&ab_channel=AmpCode)
+- [Understanding Spark Application concepts and Running our first PySpark application](https://www.youtube.com/watch?v=UeNwxQRicdQ&list=PL6UwySlcwEYKiC-EjEmN4f33c5fVpbzha&index=6&ab_channel=AmpCode)
+- [PySpark Optimization using Cache and Persist | PySpark Tutorial](https://www.youtube.com/watch?v=7lKg1DPRm64&list=PL6UwySlcwEYKiC-EjEmN4f33c5fVpbzha&index=15&ab_channel=AmpCode)
+- [Spark Basics | Partitions](https://www.youtube.com/watch?v=hvF7tY2-L3U&ab_channel=PalantirDevelopers)
+- [Spark Basics | Shuffling](https://www.google.com/url?q=https://www.youtube.com/watch?v%3DffHboqNoW_A%26t%3D240s&sa=D&source=editors&ust=1709189162988944&usg=AOvVaw1xNeM_yHBRqq00MnTN_oJS)
